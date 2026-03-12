@@ -1,0 +1,38 @@
+De : Hélène Dorval
+À : sigmoidal
+Date : 12 mars 2026, 17:42
+Objet : Re : Chapitre 1, première version
+
+Bonjour,
+
+J'ai lu votre première version du chapitre 1. L'idée de départ est claire et le sujet vous va bien : un lexique assez petit pour être lu en entier, c'est un parti pris que l'on peut défendre.
+
+Quelques remarques, par ordre d'importance.
+
+1. L'état de l'art est trop mince. Taboada et ses coauteurs ne suffisent pas. Ajoutez au moins Hu et Liu, SentiWordNet, VADER et, pour le français, FEEL.
+2. Vous écrivez « on » partout. Dans une thèse, « nous » est plus habituel, et il vous engage davantage.
+3. La définition du résidu (1.3) est annoncée « à stabiliser ». Elle doit l'être avant la prochaine version, car tout le reste en dépend.
+4. Vous présentez le lexique avant le score. Je placerais le score d'abord : le lecteur doit savoir à quoi servent les poids avant d'en voir le tableau.
+
+Une piste de lecture : la thèse de Pierre Depaz sur l'esthétique du code source, que l'on trouve en ligne. Il y distingue la lecture par la machine et la lecture par la personne. Cela pourrait vous servir de cadre pour votre résidu.
+
+Le 1.4 m'a surprise : une section d'une seule phrase, qui n'explique rien. Je suppose qu'elle est provisoire.
+
+Bien cordialement,
+H. Dorval
+
+----------------------------------------
+
+De : sigmoidal
+À : Hélène Dorval
+Date : 12 mars 2026, 23:58
+Objet : Re : Re : Chapitre 1, première version
+
+Bonjour,
+
+Merci pour cette lecture. Je prends tout : les références, le « nous », le plan et la définition du résidu, que je stabilise cette semaine. Je lis Depaz ce soir.
+
+Pour le 1.4, oui, c'est provisoire. Je n'ai pas encore trouvé la formulation.
+
+Bien cordialement,
+sigmoidal

@@ -1,0 +1,30 @@
+# Plan
+
+Titre provisoire : *Polarité et résidu : ce qu'un score de sentiment ne mesure pas*
+
+## Sommaire
+
+1. **Polarité** : le score, la sigmoïde, le lexique, le résidu. *(rédigé, v3)*
+2. **Lexique** : constitution, confrontation à FEEL et NRC. *(à rédiger)*
+3. **Seuil** : ce qui est compté sans être mesuré. *(fragment)*
+4. **Le reste** : ce que le calcul ne prend pas. *(brouillon)*
+5. ~~Conclusion~~
+   ~~Conclusion : ce que le modèle ne dit pas~~
+   ~~Ouverture~~
+   *(à reprendre)*
+
+## Annexes
+
+- A. Lexique d'ELL (tableau 2 du chapitre 1)
+- B. Corpus d'essai (4 000 entrées)
+- C. Journaux d'essai
+
+## Notes
+
+- ch1 : ajouter FEEL en comparaison, vérifier la pente à l'origine
+- ch2 : demander à D. si les poids à la main sont acceptables
+- ch3 : reprendre la section 3.4 (trop courte)
+- ch4 : ton à revoir, supprimer les crochets avant envoi
+- la partie 5 attend le chapitre 4
+
+*dernière modification : 02:41*
