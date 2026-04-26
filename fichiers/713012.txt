@@ -1,0 +1,35 @@
+De : Hélène Dorval
+À : sigmoidal
+Date : 27 avril 2026, 10:15
+Objet : Re : Chapitre 1, deuxième version
+
+Bonjour,
+
+Net progrès. Le plan est meilleur, les références sont en place, et l'hypothèse des deux lectures est bien amenée : c'est la partie la plus originale. Trois points.
+
+- Vous nommez le système ELL. Pourquoi un sigle ? Un nom propre donne à un programme une personnalité que l'état de l'art ne lui accorde pas. Assumez-le ou renoncez-y.
+- Les annotateurs : combien sont-ils, et quel est leur accord ? Il faut un coefficient (l'alpha de Krippendorff, par exemple), et vous n'en donnez aucun.
+- Le 1.4 a changé de formulation depuis la première version, sans que je comprenne pourquoi.
+
+Pour la suite : le chapitre 2 devra confronter vos poids écrits à la main à FEEL. Je n'y vois pas d'objection de principe, à condition que la confrontation soit chiffrée.
+
+Cordialement,
+H. Dorval
+
+----------------------------------------
+
+De : sigmoidal
+À : Hélène Dorval
+Date : 28 avril 2026, 01:36
+Objet : Re : Re : Chapitre 1, deuxième version
+
+Bonjour,
+
+Trois annotateurs. Alpha de Krippendorff : 0,61 sur l'ensemble du corpus d'essai. Je l'ajoute à la prochaine version.
+
+ELL est un sigle de travail. Il restera un sigle.
+
+Pour le 1.4, je cherche encore.
+
+Cordialement,
+sigmoidal

@@ -1,0 +1,107 @@
+# 1. Polarité
+
+## 1.1 Contexte
+
+L'analyse de sentiments consiste à attribuer à un énoncé une valeur qui rende compte de son orientation affective : favorable, défavorable, ou ni l'une ni l'autre. Le domaine s'est constitué autour des avis de consommateurs publiés en ligne (Pang et Lee, 2008 ; Liu, 2012) et prend le plus souvent la forme d'une classification en trois classes : positif, négatif, neutre.
+
+Les méthodes se répartissent en trois familles. Les premières apprennent à partir d'exemples annotés (Pang, Lee et Vaithyanathan, 2002). Les deuxièmes déduisent l'orientation d'un mot de ses cooccurrences avec des mots de référence (Turney, 2002). Les troisièmes s'appuient sur un lexique, c'est-à-dire sur une liste de mots dont chacun porte une valeur préalable, et calculent le score d'un énoncé à partir de ces valeurs (Hu et Liu, 2004 ; Taboada et al., 2011).
+
+Plusieurs lexiques sont disponibles. SentiWordNet associe des scores de polarité aux sens d'un réseau lexical (Esuli et Sebastiani, 2006) ; le lexique NRC rattache des mots à des émotions et à deux polarités (Mohammad et Turney, 2013) ; FEEL fournit un lexique d'émotions pour le français (Abdaoui et al., 2017) ; VADER combine un lexique et des règles pour les textes brefs des réseaux sociaux (Hutto et Gilbert, 2014). Dans l'ensemble, ces ressources sont évaluées par des mesures agrégées, comme l'exactitude ou la mesure F : elles disent combien d'énoncés sont bien classés, plus rarement comment les autres sont manqués.
+
+Le système étudié ici relève de la troisième famille. Nous le nommons ELL (Évaluateur Lexical Limité). Il est volontairement modeste, et ce choix tient à la lisibilité : un lexique se lit en entier, un modèle entraîné non. Ce qu'ELL ne mesure pas peut donc, en principe, être situé quelque part.
+
+Nous empruntons enfin une hypothèse de travail à l'étude du code source. Depaz (2023) distingue deux lectures d'un texte de programme : celle de la machine, qui l'exécute, et celle de la personne, qui le comprend. Nous supposons qu'il en va de même d'un lexique de polarité. La machine l'additionne ; une personne le comprend ; et les deux lectures ne coïncident pas toujours.
+
+## 1.2 Le score borné
+
+Le score d'un énoncé s'obtient en deux temps. On additionne les poids des mots reconnus, après les avoir ramenés à leur forme de base, puis on borne la somme à l'aide d'une fonction sigmoïde, de façon que le score soit compris entre −1 et +1 (listing 1).
+
+```js
+const sigmoide = x => 1 / (1 + Math.exp(-x));
+const score = phrase => 2 * sigmoide(somme(phrase)) - 1;
+```
+
+*Listing 1. — Calcul du score. La fonction `somme` additionne les poids des mots reconnus.*
+
+Deux propriétés motivent ce choix. D'une part, aucune valeur ne peut sortir de l'intervalle, quelle que soit la longueur de l'énoncé. D'autre part, la courbe est presque droite autour de zéro, où sa pente vaut 1/2 : une somme de 0,2 donne un score de 0,10, et les cas faibles s'y distinguent mal du bruit. À l'autre extrémité, la courbe sature : des sommes de 3 et de 5 donnent des scores de 0,91 et 0,99, que l'échelle ne sépare presque plus. Le score discrimine donc le mieux dans les zones intermédiaires, entre ces deux extrémités.
+
+Le tableau 1 donne un jeu de test de cinq énoncés ; les poids correspondants figurent dans le tableau 2.
+
+| énoncé | somme | score |
+|---|---|---|
+| « Il fait beau. » | +0,85 | +0,40 |
+| « Je suis fatigué. » | −0,73 | −0,35 |
+| « Reste. » | +0,24 | +0,12 |
+| « Tu es là ? » | +0,10 | +0,05 |
+| « … » | — | 0,00 |
+
+*Tableau 1. — Jeu de test.*
+
+La dernière ligne appelle un commentaire : aucun mot n'étant reconnu, la somme est vide et le score vaut zéro. Ce zéro ne désigne pas une neutralité mais une absence de mesure. Le chapitre 3 y revient.
+
+## 1.3 Le lexique
+
+Chaque mot reconnu porte un poids, positif ou négatif. Les mots absents du lexique n'ajoutent rien : ils sont ignorés. Le tableau 2 donne le lexique complet d'ELL, soit quarante entrées.
+
+| mot | poids |
+|---|---|
+| absence | −0,55 |
+| aimer | +0,80 |
+| amour | +0,95 |
+| attendre | −0,18 |
+| beau | +0,85 |
+| bon | +0,60 |
+| calme | +0,45 |
+| chaleur | +0,40 |
+| confiance | +0,58 |
+| douleur | −0,88 |
+| doux | +0,55 |
+| échec | −0,66 |
+| ensemble | +0,42 |
+| erreur | −0,45 |
+| espérer | +0,35 |
+| fatigué | −0,73 |
+| fermer | −0,28 |
+| froid | −0,38 |
+| haine | −0,95 |
+| heureux | +0,78 |
+| joie | +0,90 |
+| là | +0,10 |
+| lumière | +0,48 |
+| manquer | −0,40 |
+| mauvais | −0,70 |
+| merci | +0,65 |
+| nuit | −0,15 |
+| oublier | −0,58 |
+| partir | −0,42 |
+| peur | −0,75 |
+| perdre | −0,60 |
+| rester | +0,24 |
+| revenir | +0,30 |
+| rire | +0,50 |
+| seul | −0,62 |
+| souvenir | +0,20 |
+| tard | −0,12 |
+| triste | −0,80 |
+| vide | −0,57 |
+| vivre | +0,52 |
+
+*Tableau 2. — Lexique de polarité (40 entrées). Les poids ne sont pas des scores : ils s'additionnent avant d'être bornés (voir 1.2).*
+
+Le lexique est équilibré : vingt entrées positives, vingt négatives. Les poids ont été fixés à la main ; leur confrontation à des ressources existantes fait l'objet du chapitre 2.
+
+Pour mesurer ce que le score ne rend pas, nous le confrontons à un jugement humain. Chaque énoncé du corpus d'essai, décrit au chapitre 3, est lu par plusieurs annotateurs qui lui attribuent une valeur sur la même échelle, de −1 à +1. La moyenne de ces valeurs sert de référence. Nous appelons résidu ce que cette référence contient et que le score ne contient pas.
+
+## 1.4 Tentative d'interprétation du résidu
+
+Ce qui demeure est comparable à l'écart, en proportion de la limite.
+
+## 1.5 Questions de recherche
+
+Trois questions organisent la suite.
+
+1. Que mesure exactement un score de polarité lexical, et sur quelle échelle ?
+2. Qu'en laisse-t-il de côté : négation, ironie, ellipse, absence de mots reconnus ?
+3. Ce qu'il laisse de côté est-il réparti au hasard, ou selon une forme que l'on peut lire ?
+
+Le chapitre 2 examine le lexique, le chapitre 3 le seuil en deçà duquel une réponse n'est pas lue, le chapitre 4 le résidu lui-même, sous le titre « Le reste ». Une dernière partie, dont le contenu n'est pas arrêté, en tire les conséquences.
