@@ -1,0 +1,41 @@
+BIBLIOGRAPHIE (provisoire)
+
+Abdaoui, A., Azé, J., Bringay, S., Poncelet, P. (2017). FEEL: a French Expanded Emotion Lexicon. Language Resources and Evaluation, 51(3).
+
+Chow, C. K. (1970). On optimum recognition error and reject tradeoff. IEEE Transactions on Information Theory, 16(1), 41-46.
+
+Depaz, P. (2023). The role of aesthetics in understanding source code. Thèse de doctorat. https://source.enframed.net
+
+Esuli, A., Sebastiani, F. (2006). SentiWordNet: a publicly available lexical resource for opinion mining. Actes de LREC 2006.
+
+Hu, M., Liu, B. (2004). Mining and summarizing customer reviews. Actes de KDD 2004, 168-177.
+
+Hutto, C. J., Gilbert, E. (2014). VADER: a parsimonious rule-based model for sentiment analysis of social media text. Actes d'ICWSM 2014.
+
+Koppel, M., Schler, J. (2006). The importance of neutral examples for learning sentiment. Computational Intelligence, 22(2), 100-109.
+
+Liu, B. (2012). Sentiment Analysis and Opinion Mining. Morgan & Claypool.
+
+Lovelace, A. A. (1843). Notes de la traductrice, in L. F. Menabrea, "Sketch of the Analytical Engine invented by Charles Babbage". Taylor's Scientific Memoirs, vol. 3.
+
+Mohammad, S. M., Turney, P. D. (2013). Crowdsourcing a word-emotion association lexicon. Computational Intelligence, 29(3), 436-465.
+
+Nagel, T. (1974). What is it like to be a bat? The Philosophical Review, 83(4), 435-450.
+
+Pang, B., Lee, L. (2008). Opinion mining and sentiment analysis. Foundations and Trends in Information Retrieval, 2(1-2), 1-135.
+
+Pang, B., Lee, L., Vaithyanathan, S. (2002). Thumbs up? Sentiment classification using machine learning techniques. Actes d'EMNLP 2002, 79-86.
+
+Taboada, M., Brooke, J., Tofiloski, M., Voll, K., Stede, M. (2011). Lexicon-based methods for sentiment analysis. Computational Linguistics, 37(2), 267-307.
+
+Turing, A. M. (1950). Computing machinery and intelligence. Mind, 59(236), 433-460.
+
+Turney, P. D. (2002). Thumbs up or thumbs down? Semantic orientation applied to unsupervised classification of reviews. Actes d'ACL 2002, 417-424.
+
+--- entrées sans auteur ---
+
+[sans auteur]. Du silence comme entrée. Manuscrit, non daté.
+
+[sans auteur]. Notes de lecture à voix haute. Fichier local, non daté.
+
+[sans auteur]. Journal d'essai, nuits 1 à 41.

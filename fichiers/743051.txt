@@ -1,0 +1,27 @@
+De : Julien Roux
+À : sigmoidal
+Date : 19 mai 2026, 11:20
+Objet : Ton tokenizer
+
+Salut,
+
+J'ai vu passer ton code de lexique dans le dépôt du labo. Quarante entrées, c'est tout ? Et une expression régulière avec \p{L}+ pour découper : ça marche, mais l'apostrophe coupe « aujourd'hui » en deux, et « aujourd » ne sera jamais dans ton lexique. Regarde Intl.Segmenter, ou au moins une liste d'exceptions.
+
+Sinon, pot jeudi soir, tu viens ?
+
+Julien
+
+----------------------------------------
+
+De : sigmoidal
+À : Julien Roux
+Date : 19 mai 2026, 23:47
+Objet : Re : Ton tokenizer
+
+Salut,
+
+Oui, quarante, c'est volontaire. Pour l'apostrophe, aucun des quarante mots n'en contient : il n'y a pas de risque.
+
+Pas jeudi.
+
+sigmoidal
