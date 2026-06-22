@@ -1,0 +1,36 @@
+De : Hélène Dorval
+À : sigmoidal
+Date : 22 juin 2026, 16:20
+Objet : Re : Chapitre 1, version 3
+
+Bonjour,
+
+La version 3 se lit bien. L'introduction est plus assurée, la comparaison avec VADER est utile, et votre dernier paragraphe est beau, même si ce n'est pas un résultat. Quelques points.
+
+- Le coefficient d'accord promis n'est toujours pas dans le texte.
+- Note 1 : « elle n'a jamais dépassé 0,91 ». ELL est un évaluateur, donc masculin. Faute d'accord ou choix ? Dans le second cas, il faudra l'assumer ailleurs aussi.
+- Le 1.4. J'ai comparé les trois versions : la phrase a changé à chaque fois, et chaque fois de peu. Je ne vois pas ce que vous cherchez à faire. Fixez-la, ou supprimez la section.
+- Les poids écrits à la main restent un point faible. Le chapitre 2 devra les justifier.
+
+Je pars en congé du 6 juillet au 1er août. Je relirai le chapitre 2 à mon retour.
+
+Cordialement,
+H. Dorval
+
+----------------------------------------
+
+De : sigmoidal
+À : Hélène Dorval
+Date : 23 juin 2026, 02:14
+Objet : Re : Re : Chapitre 1, version 3
+
+Bonjour,
+
+Le coefficient sera dans le chapitre 2.
+
+Pour la note 1, je vérifie.
+
+Pour le 1.4, je le garde tel quel.
+
+Bon congé.
+sigmoidal
