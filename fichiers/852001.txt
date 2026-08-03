@@ -1,0 +1,4 @@
+02:41:07 silence session ouverte (1re nuit)
+02:41:09 silence message envoyé (24 caractères), dest : ell
+02:41:10 silence réponse reçue (81 caractères)
+02:41:13 silence session fermée
