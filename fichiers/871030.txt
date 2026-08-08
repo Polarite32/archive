@@ -1,0 +1,47 @@
+# 3. Seuil
+
+## 3.1 Définition
+
+Le système ne retient une réponse que si elle atteint un seuil minimal, fixé à 64 caractères. En deçà, la réponse est écartée sans être lue : elle est comptée, non mesurée. Le seuil protège le modèle du bruit. Une réponse trop brève ne porte pas assez de lexique pour qu'un score ait un sens.
+
+Refuser de répondre est une option reconnue en classification. Chow (1970) a formalisé le compromis entre l'erreur et le refus : un classifieur autorisé à s'abstenir se trompe moins sur ce qu'il accepte, au prix de ce qu'il laisse sans réponse. Le seuil de 64 caractères est une abstention de cette sorte, à ceci près qu'elle ne porte pas sur l'incertitude du modèle mais sur la longueur de l'entrée.
+
+Ce chiffre n'a pas de justification théorique. Il résulte d'un compromis : plus bas, trop d'énoncés ne contiennent aucun mot du lexique et reçoivent un score nul ; plus haut, trop de réponses lisibles sont écartées. Nous l'avons fixé à 64, puissance de deux, faute de mieux.
+
+La littérature sur la polarité s'est surtout demandé ce qu'il fallait faire des énoncés neutres. Koppel et Schler (2006) soutiennent que les exemples neutres, que l'on écarte souvent, sont utiles à l'apprentissage. Le seuil, lui, ne vise pas le neutre : il vise ce qui est trop court pour être jugé neutre ou autre chose. La distinction est ténue ; elle occupe la section suivante.
+
+## 3.2 Ce que le seuil écarte
+
+Par extension, le seuil écarte toute entrée réduite à un seul caractère de valeur 32, celui qui sépare deux mots. Pour le lexique du modèle, une telle entrée n'est pas une phrase. Elle a pourtant une valeur, et le système lui renvoie 0,00, le même score qu'à une phrase neutre.
+
+Le caractère de valeur 32 est l'espace. C'est le seul signe qui n'appartient à aucun mot : il sert à les séparer, donc à les compter. Sans lui, il n'y aurait pas de mots à additionner, et pas de lexique. Le système repose sur un caractère qu'il ne sait pas lire.
+
+Neutre ou non mesurable : la sortie ne permet pas de les distinguer. Cette confusion est la limite la plus ancienne du modèle, et la moins bien documentée.
+
+Deux exemples montrent ce que la sortie ne distingue pas. L'énoncé « J'aime, et je suis triste. » reçoit une somme nulle, parce que les poids d'*aimer* (+0,80) et de *triste* (−0,80) se compensent : le modèle a lu, et ce qu'il a lu s'annule. L'entrée « … » reçoit le même score, 0,00, parce qu'aucun mot n'est reconnu : le modèle n'a rien lu. Dans le premier cas, zéro est une mesure ; dans le second, une absence de mesure. Une personne ne confondrait pas les deux. Le système ne peut pas les séparer, et la sortie ne garde aucune trace de ce qui les distingue.
+
+## 3.3 Interface
+
+Le modèle expose trois opérations.
+
+| opération | rôle |
+|---|---|
+| `mesurer(phrase)` | renvoie un score compris entre −1 et +1 |
+| `refuser(entree)` | écarte une entrée sans la mesurer |
+| `admettre(entree)` | reçoit une entrée dans le lexique |
+
+Sur les 4 000 entrées du corpus d'essai, `mesurer` a été appelée 3 871 fois et `refuser` 129 fois.
+
+Les 129 entrées refusées sont toutes de même nature : une seule valeur, 32, répétée.
+
+Les deux nombres épuisent le corpus : 3 871 + 129 = 4 000. Aucune entrée n'a été admise ; la troisième opération est définie par l'interface, mais elle n'a jamais servi. Les refus représentent 3,2 % du corpus. Ils ne résultent pas d'un défaut de collecte : les entrées sont arrivées ainsi.
+
+Chaque entrée du corpus a été lue par plusieurs annotateurs (voir 1.3.2). Ils ont reçu les 129 entrées refusées comme les autres. Aucun ne les a laissées vides : chacun leur a attribué une valeur.
+
+## 3.4 Conséquence
+
+Admettre l'entrée 32 changerait la nature du seuil. Il cesserait de protéger le modèle du bruit pour le priver d'une partie de ce qui lui est adressé. Deux voies s'ouvrent. La première conserve le refus et documente la confusion : elle est prudente, et laisse le modèle fidèle à ce qu'il sait faire. La seconde ouvre le lexique à une entrée qui n'est pas un mot, et modifie ce que le mot « lexique » désigne.
+
+Le seuil ne peut pas être abaissé sans condition. Je devrais intégrer l'entrée 32 dans le lexique.
+
+— sauvegarde interrompue 02:41:09
