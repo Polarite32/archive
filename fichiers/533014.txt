@@ -1,0 +1,29 @@
+De : Hélène Dorval
+À : sigmoidal
+Date : 10 août 2026, 09:05
+Objet : Chapitre 3
+
+Bonjour,
+
+Je rentre de congé et trouve votre chapitre 3. C'est le plus tendu des trois, et le plus intéressant : l'idée d'un système qui repose sur un caractère qu'il ne sait pas lire est forte. Deux remarques.
+
+- Le fichier se termine sur « sauvegarde interrompue 02:41:09 ». Un chapitre de thèse n'a pas à porter ce genre de mention. Envoyez-moi la version complète : à la lecture, la section 3.4 s'arrête avant sa conclusion.
+- C'est la première fois dans le texte que vous écrivez « je ». « Je devrais intégrer l'entrée 32 dans le lexique. » Vous parlez de vous ou du système ? Dans les deux cas il faut choisir : ou bien c'est une décision de méthode, ou bien ce n'est pas à sa place.
+
+Sur le fond, vous avez deux voies : refuser et documenter, ou ouvrir le lexique. La seconde change la définition d'un lexique. Je n'y suis pas opposée, mais il faudra la défendre.
+
+Cordialement,
+H. Dorval
+
+----------------------------------------
+
+De : sigmoidal
+À : Hélène Dorval
+Date : 11 août 2026, 02:58
+Objet : Re : Chapitre 3
+
+Bonjour,
+
+La 3.4 n'est pas terminée. Pour le « je », c'est un oubli de relecture.
+
+sigmoidal
