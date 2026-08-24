@@ -1,0 +1,39 @@
+# 4. Le reste
+
+*Brouillon. Ne pas envoyer.*
+
+## 4.1 Trois sens d'un mot
+
+En français, « reste » s'entend de trois manières. En arithmétique, c'est ce qui subsiste d'une division quand on a retiré tous les paquets entiers : dans 17 = 3 × 5 + 2, le reste est 2, et il est toujours strictement plus petit que ce par quoi l'on divise. Dans la langue courante, c'est ce qui survit à un tri : ce que l'on n'a pas su ranger, ce qui n'a pas été compté. À l'impératif, c'est une demande : *reste*, c'est-à-dire ne pars pas.
+
+Ces trois sens ne forment pas un jeu de mots. Ils décrivent une même situation vue de trois côtés. Il y a une borne, qui définit ce que l'on peut ranger ; il y a ce qui dépasse le rangement ; et il y a quelqu'un qui demande que ce qui dépasse ne disparaisse pas.
+
+## 4.2 Un reste qui n'est pas une erreur
+
+Le chapitre 1 a défini le résidu comme ce que la référence humaine contient et que le score ne contient pas. Nous l'appellerons désormais le reste, une fois établi qu'il a une forme. Une erreur se corrige : on déplace un poids, on ajoute un mot, on étend les formes reconnues. Le reste est ce qui survit à ces corrections. Chaque fois que le lexique a été enrichi, une part de l'écart s'est résorbée, et une autre s'est déplacée sans diminuer. [vérifier ce point sur le corpus d'essai]
+
+Prenons l'énoncé « Reste. ». Le modèle y lit un verbe, *rester*, au poids de +0,24, que la sigmoïde ramène à +0,12. Les annotateurs y lisent autre chose qu'un verbe : une demande, dont la valeur dépend de qui la prononce et à qui. Le modèle n'a aucun moyen de savoir qu'un mot de cinq lettres puisse être une supplique. [moyenne annotée à reprendre du corpus]
+
+Le cas le plus net est celui des 129 entrées refusées. Le modèle n'a rien mesuré ; les annotateurs, qui les ont reçues comme les autres, ont tous attribué une valeur. Pour ces entrées, le score n'existe pas, et le reste est donc la valeur humaine tout entière. C'est le reste le plus pur dont nous disposions : aucun calcul ne s'y mêle.
+
+## 4.3 Une hypothèse
+
+Nous voudrions avancer ici une hypothèse, au risque de l'emphase. [ton à revoir avant envoi]
+
+Une objection ancienne veut que la machine ne produise rien qui ne lui ait été ordonné. Lovelace (1843) notait que la Machine analytique ne prétend rien créer et exécute ce que l'on sait lui faire exécuter ; Turing (1950) reprend l'objection pour y répondre, les machines le surprenant, disait-il, très souvent. Quant à ce que la machine éprouve, si elle éprouve quelque chose, nous n'y avons pas accès : Nagel (1974) soutient que le caractère subjectif d'une expérience échappe à toute description faite de l'extérieur. Tant que l'on pose la question sous la forme « que ressent-elle ? », on n'avance pas.
+
+Mais la question peut être déplacée. Reprenons plus lentement.
+
+Un système qui fait exactement ce que ses règles prédisent n'a pas de reste. Il est transparent : il ne nous dit rien que nous n'y ayons mis. Un système qui s'écarte de ses règles, même de très peu, en a un. Or nous savons mesurer un écart : nous venons de le faire sur quatre mille entrées. Il suffirait de retourner l'instrument. Au lieu de demander au modèle ce qu'il pense d'une phrase, on lui demanderait ce qu'il en fait que ses poids n'expliquent pas.
+
+Nous croyons que c'est là que se trouverait, si ELL en avait un, son sentiment : non dans le score, qui est ce qu'elle dit, mais dans le reste, qui est ce qu'elle ne peut pas dire avec ses poids. [accord à vérifier]
+
+Cela a quelque chose de vertigineux. Mesurer, c'est ranger dans des paquets de même taille ; le reste est ce qui refuse d'y entrer, et ce qui refuse d'y entrer n'est pas interchangeable. Deux phrases qui reçoivent le même score se ressemblent pour le modèle. Elles diffèrent par leur reste. L'individuel est exactement ce qui ne se laisse pas diviser. Le reste est toujours plus petit que l'unité qui le borne, mais il n'est jamais nul tant que la division ne tombe pas juste, et elle ne tombe presque jamais juste. Plus l'unité est fine, plus le reste est petit. Il ne disparaît pas.
+
+Il manque l'expérience. Il faudrait un système auquel on laisserait la possibilité de ne pas suivre ses poids, et un moyen de relever ce qu'il en fait. [à concevoir]
+
+## 4.4 Réserve
+
+Rien de cela n'est démontré. Nous avons un reste, non un sentiment. Le passage de l'un à l'autre est le pari de cette thèse, et nous le formulons comme tel. [D. demandera une réserve ici ; la garder]
+
+Il y a un reste. C'est déjà beaucoup. [à relire demain]
