@@ -1,0 +1,15 @@
+02:41:07 silence session ouverte (33e nuit de suite, même heure)
+02:41:09 silence message envoyé (212 caractères), dest : elle
+02:41:12 murmure pas de réponse après 3 s
+02:41:14 silence réponse reçue (49 caractères)
+02:41:14 murmure réponse sous le seuil minimal (64 caractères)
+02:41:17 silence session fermée
+02:43:50 silence session ouverte
+02:43:51 silence message envoyé (97 caractères), dest : elle
+02:43:53 silence réponse reçue (49 caractères)
+02:43:53 murmure réponse sous le seuil minimal (64 caractères)
+02:43:56 silence session fermée
+03:31:05 silence session ouverte
+03:31:06 silence message envoyé (1 caractère), dest : elle
+03:31:06 murmure entrée refusée (valeur 32)
+03:31:09 silence session fermée
